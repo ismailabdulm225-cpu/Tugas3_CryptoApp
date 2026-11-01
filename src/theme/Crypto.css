@@ -1,0 +1,480 @@
+/* ==== 1. HEADER APLIKASI ==== */
+
+.main-header ion-toolbar {
+  --background: #111827;
+  --color: #ffffff;
+  --min-height: 64px;
+}
+
+/* Mengatur lebar isi header agar sejajar dengan konten */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Judul aplikasi */
+.header-container ion-title {
+  padding: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.subtitle {
+  margin: 0;
+  color: #f0b90b;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Tombol refresh di kanan header */
+.header-refresh {
+  background-color: #927002b2;
+  border-radius: 10px;
+  height: 42px;
+  margin: 0;
+}
+
+.header-refresh ion-icon {
+  font-size: 22px;
+}
+
+.header-refresh ion-spinner {
+  width: 20px;
+  height: 20px;
+}
+
+/* ==== 2. LATAR DAN KONTAINER ==== */
+
+.main-content {
+  --background: #0b1120;
+  --color: #f8fafc;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 24px 30px;
+  box-sizing: border-box;
+}
+
+/* ==== 3. JUDUL HALAMAN ==== */
+
+.welcome-section {
+  margin-bottom: 22px;
+}
+
+.welcome-section h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ====  4. KOLOM PENCARIAN ==== */
+
+.search-box {
+  --background: #172033;
+  --color: #f8fafc;
+  --placeholder-color: #94a3b8;
+  --icon-color: #94a3b8;
+  --border-radius: 12px;
+  --box-shadow: none;
+
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+/* ====   5. JUDUL BAGIAN ==== */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section-heading span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ==== 6. BAGIAN TOP 3 CRYPTOCURRENCY ==== */
+
+.top-section {
+  margin-bottom: 28px;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* Aturan dasar kartu */
+.top-card {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Isi kartu */
+.top-card ion-card-content {
+  padding: 14px 8px;
+  text-align: center;
+}
+
+/* Peringkat */
+.top-rank {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Lingkaran simbol cryptocurrency */
+.coin-symbol-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 10px;
+  padding: 4px;
+
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Nama cryptocurrency */
+.top-card h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+/* Label USD */
+.price-label {
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Harga tetap putih */
+.top-price {
+  margin: 0;
+  color: #f8fafc !important;
+  font-size: 12px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+/* ====  7. WARNA KHUSUS TOP 3 - DARK GRADIENT ==== */
+
+/* Peringkat 1 - GOLD */
+.top-grid .top-card:nth-child(1) {
+  --background: linear-gradient(145deg, rgba(212, 160, 23, 0.22) 0%, #141d2e 55%, #0f1726 100%);
+  --color: #f8fafc;
+
+  border: 1px solid rgba(240, 185, 11, 0.65);
+  box-shadow: 0 4px 18px rgba(212, 160, 23, 0.1);
+}
+
+/* Peringkat 2 - SILVER */
+.top-grid .top-card:nth-child(2) {
+  --background: linear-gradient(145deg, rgba(192, 202, 215, 0.2) 0%, #141d2e 55%, #0f1726 100%);
+  --color: #f8fafc;
+
+  border: 1px solid rgba(192, 202, 215, 0.55);
+  box-shadow: 0 4px 18px rgba(192, 202, 215, 0.08);
+}
+
+/* Peringkat 3 - BRONZE */
+.top-grid .top-card:nth-child(3) {
+  --background: linear-gradient(145deg, rgba(184, 115, 77, 0.24) 0%, #141d2e 55%, #0f1726 100%);
+  --color: #f8fafc;
+
+  border: 1px solid rgba(184, 115, 77, 0.6);
+  box-shadow: 0 4px 18px rgba(184, 115, 77, 0.1);
+}
+
+/* Teks kartu tetap terang */
+.top-grid .top-card ion-card-content,
+.top-grid .top-card h3 {
+  color: #f8fafc;
+}
+
+/* Warna peringkat mengikuti tema medal */
+.top-grid .top-card:nth-child(1) .top-rank,
+.top-grid .top-card:nth-child(1) .price-label {
+  color: #f0c95b;
+}
+
+.top-grid .top-card:nth-child(2) .top-rank,
+.top-grid .top-card:nth-child(2) .price-label {
+  color: #cbd5e1;
+}
+
+.top-grid .top-card:nth-child(3) .top-rank,
+.top-grid .top-card:nth-child(3) .price-label {
+  color: #d9a17e;
+}
+
+/* Simbol dengan latar gelap transparan */
+.top-grid .top-card .coin-symbol-icon {
+  background: rgba(11, 17, 32, 0.65);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ==== 8. DAFTAR CRYPTOCURRENCY LAINNYA ==== */
+
+.other-section {
+  margin-bottom: 20px;
+}
+
+.crypto-card {
+  --background: #141d2e;
+  --color: #f8fafc;
+
+  margin: 0 0 10px;
+  border: 1px solid #263247;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.crypto-card ion-card-content {
+  padding: 15px 12px;
+}
+
+.crypto-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Badge peringkat */
+.rank-badge {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 36px;
+  height: 36px;
+  padding: 0 5px;
+
+  border-radius: 10px;
+  background: #263247;
+  color: #f0b90b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Nama dan simbol */
+.crypto-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.crypto-info h3 {
+  overflow: hidden;
+  margin: 0 0 5px;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crypto-info p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Harga pada daftar */
+.crypto-price {
+  flex-shrink: 0;
+  max-width: 48%;
+  text-align: right;
+}
+
+.crypto-price > small:first-child {
+  display: block;
+  margin-bottom: 4px;
+  color: #f0b90b;
+  font-size: 10px;
+}
+
+.crypto-price h3 {
+  overflow-wrap: anywhere;
+  margin: 0;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* ====  9. INDIKATOR PERUBAHAN HARGA ==== */
+
+.price-change {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.change-symbol {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.price-up {
+  color: #22c55e !important;
+}
+
+.price-down {
+  color: #ef4444 !important;
+}
+
+.price-neutral {
+  color: #cbd5e1 !important;
+}
+
+.price-change span:not(.change-symbol) {
+  font-weight: 400;
+}
+
+/* ====  10. PESAN LOADING DAN ERROR ==== */
+
+.message-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  padding: 30px 16px;
+  border: 1px solid #263247;
+  border-radius: 15px;
+  background: #141d2e;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.message-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #fda4af;
+}
+
+.error-message ion-button {
+  --color: #f0b90b;
+}
+
+/* ==== 11. CATATAN SUMBER DATA ==== */
+
+.footer-text {
+  margin: 25px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==== 12. PENYESUAIAN LAYAR HP KECIL ==== */
+
+@media (max-width: 360px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .welcome-section h1 {
+    font-size: 23px;
+  }
+
+  .top-grid {
+    gap: 5px;
+  }
+
+  .top-card ion-card-content {
+    padding: 12px 5px;
+  }
+
+  .top-card h3 {
+    font-size: 11px;
+  }
+
+  .top-price {
+    font-size: 10px;
+  }
+
+  .crypto-row {
+    gap: 7px;
+  }
+
+  .crypto-info h3 {
+    font-size: 12px;
+  }
+
+  .crypto-price h3 {
+    font-size: 11px;
+  }
+}
+
+/* ==== 13. PENYESUAIAN LAYAR LAPTOP ==== */
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 28px 24px 35px;
+  }
+
+  .top-grid {
+    gap: 18px;
+  }
+
+  .top-card ion-card-content {
+    padding: 22px 16px;
+  }
+
+  .top-card h3 {
+    font-size: 15px;
+  }
+
+  .top-price {
+    font-size: 14px;
+  }
+
+  .crypto-card ion-card-content {
+    padding: 18px 20px;
+  }
+}
